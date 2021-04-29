@@ -1,0 +1,35 @@
+<html>
+
+<head>
+
+    <p id="Spotreba"> </p>
+    <p id="Palivo"> </p>
+    <p id="osobaZaplati"></p>
+    <script>
+        var text;
+        var delkuTrasy = prompt("Delka trasa?", );
+        var spotrebu = prompt("Prumerna spotreba na 100km", );
+        var cenaPaliva = prompt("Cena paliva za 1l?", );
+        var pocetOsob = prompt("Pocet prepravovanych osob?", );
+
+
+        var celkovaSpotreba = delkuTrasy * spotrebu / 100;
+        var celkovaCenaPaliva = celkovaSpotreba * cenaPaliva;
+        var osobaZaplati = celkovaCenaPaliva / pocetOsob;
+
+        document.getElementById("Spotreba").innerHTML =
+            "Celkova spotreba je : " + celkovaSpotreba + " l/" + delkuTrasy + "km";
+
+        document.getElementById("Palivo").innerHTML =
+            "Celkova cena  paliva je : " + celkovaCenaPaliva + " kč";
+
+        document.getElementById("osobaZaplati").innerHTML =
+            "Kazdy zaplatil : " + osobaZaplati + " kč";
+    </script>
+</head>
+
+<body>
+</body>
+
+
+</html>

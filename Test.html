@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#2").hide();
+            $("#3").hide();
+            $("#4").hide();
+            $("#5").hide();
+
+
+
+            
+            $("#submit1").click(function() {
+                $("input").each(function() {
+                    if ($(this).attr("name") == "Ano") {
+                        $(this).parent().css("background", "lime");
+                    }
+                    if ($(this).attr("name") == "Ne") {
+
+                        $(this).parent().css("background", "red");
+                    }
+                });
+                $("#input1").prop("disabled", true);
+                $("#input2").prop("disabled", true);
+                $("#input3").prop("disabled", true);
+                $("#input4").prop("disabled", true);
+            });
+            
+            $("#next").click(function() {
+                $("#1").hide();
+                $("#2").show();
+                $("#3").hide();
+                $("#4").hide();
+                $("#5").hide();
+
+
+            });
+
+//--------------------------------
+            $("#submit2").click(function() {
+                $("input").each(function() {
+                    if ($(this).attr("name") == "Ano1") {
+                        $(this).parent().css("background", "lime");
+                    }
+                    if ($(this).attr("name") == "Ne1") {
+
+                        $(this).parent().css("background", "red");
+                    }
+
+                });
+
+            });
+            $("#next1").click(function() {
+                $("#2").hide();
+                $("#1").hide();
+                $("#3").show();
+                $("#4").hide();
+                $("#5").hide();
+
+            });
+//-----------------------------
+            $("#submit3").click(function() {
+                $("input").each(function() {
+                    if ($(this).attr("name") == "Ano2") {
+                        $(this).parent().css("background", "lime");
+                    }
+                    if ($(this).attr("name") == "Ne2") {
+
+                        $(this).parent().css("background", "red");
+                    }
+
+                });
+
+            });
+            $("#next2").click(function() {
+                $("#2").hide();
+                $("#1").hide();
+                $("#3").hide();
+                $("#4").show();
+                $("#5").hide();
+
+            });
+//-------------------------------
+
+$("#submit4").click(function() {
+                $("input").each(function() {
+                    if ($(this).attr("name") == "Ano3") {
+                        $(this).parent().css("background", "lime");
+                    }
+                    if ($(this).attr("name") == "Ne3") {
+
+                        $(this).parent().css("background", "red");
+                    }
+
+                });
+
+            });
+            $("#next3").click(function() {
+                $("#2").hide();
+                $("#1").hide();
+                $("#3").hide();
+                $("#4").hide();
+                $("#5").show();
+
+            });
+//-------------------------------
+            $("#submit5").click(function() {
+                $("input").each(function() {
+                    if ($(this).attr("name") == "Ano4") {
+                        $(this).parent().css("background", "lime");
+                    }
+                    if ($(this).attr("name") == "Ne4") {
+
+                        $(this).parent().css("background", "red");
+                    }
+                });
+                $("input").prop("disabled", true);
+            });
+
+            $("#submit5").click(function() {
+                $("#2").show();
+                $("#1").show();
+                $("#3").show();
+                $("#4").show();
+                $("#5").show();
+
+
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <fieldset>
+        <div id="1">
+            <h2>Jaka je ma oblibena barva?</h2>
+
+            <label><input type="radio" id="input1" value="ruzova" name="Ano">ruzova</label>
+            <label><input type="radio" id="input2" value="cervena" name="Ne">cervena</label>
+            <label><input type="radio" id="input3" value="cerna" name="Ne">cerna</label>
+            <label><input type="radio" id="input4" value="modra" name="Ne">modra</label>
+            <button id="submit1">Vyhodnotit</button>
+            <button id="next">Další</button>
+
+        </div>
+
+        <div id="2">
+            <h2>Kdy jsem se narodil?</h2>
+
+            <label><input type="radio" value="zari" name="Ano1">zari</label>
+            <label><input type="radio" value="rijen" name="Ne1">rijen</label>
+            <label><input type="radio" value="listopad" name="Ne1">listopad</label>
+            <label><input type="radio" value="Prosinec" name="Ne1">Prosinec</label>
+
+            <button id="submit2">Vyhodnotit</button>
+            <button id="next1">Další</button>
+        </div>
+
+
+        <div id="3">
+            <h2>Co mam rad?</h2>
+
+            <label><input type="checkbox" value="hokej" name="Ano2">hokej</label>
+            <label><input type="checkbox" value="rugby" name="Ano2">rugby</label>
+            <label><input type="checkbox" value="fotbal" name="Ne2">fotbal</label>
+            <label><input type="checkbox" value="lakros" name="Ano2">lakros</label>
+
+            <button id="submit3">Vyhodnotit</button>
+            <button id="next2">Další</button>
+        </div>
+        <div id="4">
+            <h2>Nevim?</h2>
+
+            <label><input type="checkbox" value="hokej" name="Ano3">xxx</label>
+            <label><input type="checkbox" value="rugby" name="Ano3">yyy</label>
+            <label><input type="checkbox" value="fotbal" name="Ano3">ccc</label>
+            <label><input type="checkbox" value="lakros" name="Ano3">www</label>
+
+            <button id="submit4">Vyhodnotit</button>
+            <button id="next3">Další</button>
+        </div>
+
+        <div id="5">
+            <h2>yyy?</h2>
+
+            <label><input type="checkbox" value="hokej" name="Ne4">qqq</label>
+            <label><input type="checkbox" value="rugby" name="Ne4">www</label>
+            <label><input type="checkbox" value="fotbal" name="Ne4">eee</label>
+            <label><input type="checkbox" value="lakros" name="Ne4">rrr</label>
+
+            <button id="submit5">Vyhodnotit</button>
+           
+        </div>
+    </fieldset>
+
+</body>
+
+</html>

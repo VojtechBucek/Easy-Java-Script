@@ -1,0 +1,37 @@
+<html>
+
+<head>
+
+    <p id="sirka"> </p>
+
+</head>
+
+<body>
+
+    <script>
+        var d = new Date();
+        var v = screen.height;
+        var s = screen.width;
+        var p = navigator.appName;
+
+        document.cookie = d;
+        document.cookie = v;
+        document.cookie = s;
+        document.cookie = p;
+
+
+        document.write("Posledni navsteva : " + d + ", ");
+        document.write("Vyska je : " + v + " px " + ", ");
+        document.write("Sirka je :" + s + " px " + ", ");
+        document.write("Prohlizec :" + p);
+        if (v + s <= 360) {
+
+            document.write("Mobilni zarizeni");
+
+
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#2").hide();
+            $("#3").hide();
+
+            
+            $("#submit1").click(function() {
+                $("input").each(function() {
+                    if ($(this).attr("name") == "Ano") {
+                        $(this).parent().css("background", "lime");
+                    }
+                    if ($(this).attr("name") == "Ne") {
+
+                        $(this).parent().css("background", "red");
+                    }
+                });
+                $("#input1").prop("disabled", true);
+                $("#input2").prop("disabled", true);
+                $("#input3").prop("disabled", true);
+                $("#input4").prop("disabled", true);
+            });
+            
+            $("#next").click(function() {
+                $("#2").show();
+                $("#1").hide();
+                $("#3").hide();
+
+            });
+
+
+            $("#submit2").click(function() {
+                $("input").each(function() {
+                    if ($(this).attr("name") == "Ano1") {
+                        $(this).parent().css("background", "lime");
+                    }
+                    if ($(this).attr("name") == "Ne1") {
+
+                        $(this).parent().css("background", "red");
+                    }
+
+                });
+
+            });
+            $("#next1").click(function() {
+                $("#2").hide();
+                $("#1").hide();
+                $("#3").show();
+
+            });
+
+
+            $("#submit3").click(function() {
+                $("input").each(function() {
+                    if ($(this).attr("name") == "Ano2") {
+                        $(this).parent().css("background", "lime");
+                    }
+                    if ($(this).attr("name") == "Ne2") {
+
+                        $(this).parent().css("background", "red");
+                    }
+                });
+                $("input").prop("disabled", true);
+            });
+
+            $("#submit3").click(function() {
+                $("#2").show();
+                $("#1").show();
+                $("#3").show();
+
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <fieldset>
+        <div id="1">
+            <h2>Jaka je ma oblibena barva?</h2>
+
+            <label><input type="radio" id="input1" value="ruzova" name="Ano">ruzova</label>
+            <label><input type="radio" id="input2" value="cervena" name="Ne">cervena</label>
+            <label><input type="radio" id="input3" value="cerna" name="Ne">cerna</label>
+            <label><input type="radio" id="input4" value="modra" name="Ne">modra</label>
+            <button id="submit1">Vyhodnotit</button>
+            <button id="next">Další</button>
+
+        </div>
+
+        <div id="2">
+            <h2>Kdy jsem se narodil?</h2>
+
+            <label><input type="radio" value="zari" name="Ano1">zari</label>
+            <label><input type="radio" value="rijen" name="Ne1">rijen</label>
+            <label><input type="radio" value="listopad" name="Ne1">listopad</label>
+            <label><input type="radio" value="Prosinec" name="Ne1">Prosinec</label>
+
+            <button id="submit2">Vyhodnotit</button>
+            <button id="next1">Další</button>
+        </div>
+
+
+        <div id="3">
+            <h2>Co mam rad?</h2>
+
+            <label><input type="checkbox" value="hokej" name="Ano2">hokej</label>
+            <label><input type="checkbox" value="rugby" name="Ano2">rugby</label>
+            <label><input type="checkbox" value="fotbal" name="Ne2">fotbal</label>
+            <label><input type="checkbox" value="lakros" name="Ano2">lakros</label>
+
+            <button id="submit3">Vyhodnotit</button>
+        </div>
+    </fieldset>
+
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <p id="Navsteva"></p>
+    <p id="datum"></p>
+    <p id="Vyska"></p>
+    <p id="Sirka"></p>
+
+    <script>
+        var jmeno = prompt("Vase jmeno?");
+        const cas = new Date();
+
+        document.getElementById("Vyska").innerHTML =
+            "Screen height is " + screen.height;
+
+        document.getElementById("Sirka").innerHTML =
+            "Screen width is " + screen.width;
+
+
+        document.getElementById("Navsteva").innerHTML =
+            "Jmeno : " + jmeno;
+        document.getElementById("datum").innerHTML =
+            "Datum : " + cas;
+    </script>
+</head>
+
+<body>
+
+
+</body>
+
+</html>
